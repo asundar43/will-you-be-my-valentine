@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import './App.css';
 
 export default function Page() {
   const [noCount, setNoCount] = useState(0);
@@ -16,17 +17,17 @@ export default function Page() {
       "Are you sure?",
       "What if I asked really nicely?",
       "Pretty please",
-      "With a chocolate rice cake on top",
-      "What about a matcha frostie",
+      "With a cherry on top",
+      "What about a brown sugar cold foam espresso",
       "PLEASE POOKIE",
       "But :*(",
       "I am going to die",
       "Yep im dead",
-      "ok ur talking to nathan's ghost",
-      "please babe",
+      "ok ur talking to aadhav's ghost",
+      "please ashy",
       ":((((",
       "PRETTY PLEASE",
-      "Estoy muerto",
+      "💀",
       "No :(",
     ];
 
@@ -46,6 +47,7 @@ export default function Page() {
             className="h-[200px]"
             src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
           />
+          <h1 className="my-4 text-4xl">HII ASHNA!!!</h1>
           <h1 className="my-4 text-4xl">Will you be my Valentine?</h1>
           <div className="flex items-center">
             <button
