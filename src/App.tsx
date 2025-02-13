@@ -6,7 +6,8 @@ export default function Page() {
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
   const [backgroundImage, setBackgroundImage] = useState('');
-  const yesButtonSize = noCount * 20 + 16;
+  const baseButtonSize = 16;
+  const yesButtonSize = baseButtonSize + noCount * 20;
 
   const handleNoClick = () => {
     setNoCount(noCount + 1);
@@ -20,21 +21,17 @@ export default function Page() {
   const getNoButtonText = () => {
     const phrases = [
       "No",
+      "No :(",
       "Are you sure?",
       "What if I asked really nicely?",
       "Pretty please",
       "With a cherry on top",
       "What about a brown sugar cold foam espresso",
       "PLEASE POOKIE",
-      "But :*(",
-      "I am going to die",
-      "Yep im dead",
-      "ok ur talking to aadhav's ghost",
       "please ashy",
       ":((((",
       "PRETTY PLEASE",
       "💀",
-      "No :(",
     ];
 
     return phrases[Math.min(noCount, phrases.length - 1)];
@@ -73,13 +70,14 @@ export default function Page() {
               style={{ fontSize: yesButtonSize }}
               onClick={handleYesClick}
             >
-              <span className="tiktok-text">Yes</span>
+              Yes
             </button>
             <button
               onClick={handleNoClick}
               className=" rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
+              style={{ fontSize: baseButtonSize }}
             >
-              <span className="tiktok-text">{noCount === 0 ? "No" : getNoButtonText()}</span>
+              {noCount === 0 ? "No" : getNoButtonText()}
             </button>
           </div>
         </>
