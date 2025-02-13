@@ -7,6 +7,7 @@ body {
   align-items: center;
   overflow: hidden;
   position: relative;
+  font-family: 'Poppins', sans-serif;
 }
 
 #root {
@@ -75,4 +76,22 @@ body::before {
 
 .read-the-docs {
   color: #888;
+}
+
+/* Add this new class for TikTok-style text */
+.tiktok-text {
+  color: white; /* White text */
+  -webkit-text-stroke: 2px black; /* Set black border around the text to 2px */
+  text-shadow: none; /* Remove any text shadow */
+  font-size: 3rem; /* Increased font size */
+  letter-spacing: 2px; /* Added letter spacing */
+  font-weight: bold; /* Make the text bold */
+}
+
+/* Add this class to center the image */
+.centered-image {
+  display: block; /* Make the image a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  max-width: 100%; /* Ensure it doesn't overflow the container */
+  height: auto; /* Maintain aspect ratio */
 }
